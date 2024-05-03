@@ -66,7 +66,7 @@ class PostController extends Controller
         $post->body = $updated_data["body"];
         $file_path = $this->file_operations($request);
         $post->image = $file_path;
-        $post->creator_id = $request->creator_id; // Assuming the field name in the form is 'creator_id'
+        $post->creator_id = $request->creator_id; 
         $post->save();
         return redirect()->route('posts.index');
     }
